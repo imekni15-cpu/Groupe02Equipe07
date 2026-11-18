@@ -11,7 +11,7 @@ import MyShop from "./pages/merchant/MyShop";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import PendingMerchants from "./pages/admin/PendingMerchants";
 import UsersManagement from "./pages/admin/UsersManagement";
-
+import MerchantRegister from "./pages/merchant/MerchantRegister";
 const merchantLinks = [
   { to: "/merchant/dashboard", label: "📊 Tableau de bord" },
   { to: "/merchant/offers", label: "🍽️ Mes offres" },
@@ -33,6 +33,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<h1>Accueil CampusSave</h1>} />
           <Route path="/login" element={<h1>Connexion (à faire par P3)</h1>} />
+          <Route path="/register/merchant" element={<MerchantRegister />} />
 
           <Route
             path="/merchant"

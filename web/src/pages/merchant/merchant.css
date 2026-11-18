@@ -67,3 +67,8 @@
 .chart-bar { width: 100%; max-width: 40px; background: #16a34a; border-radius: 6px 6px 0 0; }
 .chart-value { font-weight: 600; font-size: 0.85rem; }
 .chart-label { color: #6b7280; font-size: 0.85rem; }
+.auth-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #f0fdf4; padding: 16px; font-family: system-ui, sans-serif; }
+.auth-card { background: #fff; width: 100%; max-width: 440px; padding: 28px; border-radius: 14px; border: 1px solid #e5e7eb; display: flex; flex-direction: column; gap: 14px; text-align: left; color: #1f2937; }
+.auth-card h1 { margin: 0; font-size: 1.5rem; }
+.form-plain { display: flex; flex-direction: column; gap: 14px; }
+.muted { color: #6b7280; font-size: 0.9rem; margin: 0; }
