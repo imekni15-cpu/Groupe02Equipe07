@@ -1,16 +1,24 @@
-# React + Vite
+# CampusSave : application Web (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Installation
+npm install
 
-Currently, two official plugins are available:
+## Configuration
+Copier `.env.example` en `.env` et adapter `VITE_API_URL`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Lancement
+npm run dev   (http://localhost:5173)
 
-## React Compiler
+## Mode test (sans backend)
+- Chaque service dans `src/services/` a une constante `USE_MOCK`.
+  `true` : données fictives, `false` : vraie API.
+- `src/context/AuthContext.jsx` : `DEV_MODE = true` connecte un utilisateur de test.
+  Le bouton « Test » du menu bascule entre commerçant et admin.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Pages
+- Inscription commerçant : `/register/merchant`
+- Espace commerçant : `/merchant` (tableau de bord, offres, commandes, scanner QR, commerce)
+- Espace admin : `/admin` (tableau de bord, commerçants, utilisateurs)
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## API
+Voir `docs/API_CONTRACT.md`.
