@@ -1,0 +1,10 @@
+services:
+  campussave:
+    build: .
+    ports: ["5000:5000"]
+    env_file: server/.env        # JWT_SECRET, OTP_SECRET, SMTP_USER, SMTP_PASS (obligatoires en production)
+    environment:
+      CLIENT_ORIGIN: http://localhost:5000
+    volumes: ["campussave-data:/data"]
+volumes:
+  campussave-data:
